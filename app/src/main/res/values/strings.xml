@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FindEcoBus</string>
+
+    <string name="map_api_key">AIzaSyCXNuWdt9smT1dCvaLXuo1cNdmVBtzGrCM</string>
 </resources>

@@ -6,6 +6,8 @@ import android.util.Log;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.appcore.svmc.findecobus.ui.map.MapFragment;
+
 /**
  * Created by khactu on 2019-12-15.
  */
@@ -16,7 +18,7 @@ public class FragmentFactory {
     public static final class SCENE {
         public static final String GREETING = "greeting";
 
-        public static final String MAIN_APP = "main_app";
+        public static final String MAIN_MAP = "main_map";
     }
 
     public static Fragment create(String tag, FragmentManager fragmentManager, Bundle bundle) {
@@ -33,8 +35,8 @@ public class FragmentFactory {
             case SCENE.GREETING:
 //                return GreetingFragment.create(bundle);
                 return null;
-            case SCENE.MAIN_APP:
-                return null;
+            case SCENE.MAIN_MAP:
+                return MapFragment.create(bundle);
             default:
                 Log.d(TAG, "Can't create fragment with tag: " + tag);
         }
